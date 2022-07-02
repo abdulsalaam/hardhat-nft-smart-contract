@@ -55,11 +55,14 @@ const REPORT_GAS = process.env.REPORT_GAS || false
 const config: HardhatUserConfig = {
   defaultNetwork: 'hardhat',
   networks: {
+    // MetaMask chainId issue: https://hardhat.org/metamask-issue
     hardhat: {
-      chainId: 31337,
+      // chainId: 31337,
+      chainId: 1337,
     },
     localhost: {
-      chainId: 31337,
+      // chainId: 31337,
+      chainId: 1337,
     },
     rinkeby: {
       url: RINKEBY_RPC_URL || '',
